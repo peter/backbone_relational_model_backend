@@ -32,9 +32,13 @@ git remote add origin git@github.com:peter/backbone_relational_model_backend.git
 git push -u origin master
 
 # Deploy to Heroku
+# Add gem 'thin' to Gemfile
+echo "web: bundle exec rails server thin -p \$PORT -e \$RACK_ENV" > Procfile
+git add .; git commit -m "Added Procfile"; git push
 heroku apps:create backbone-relational
 gem install bundler --pre # http://railsapps.github.com/rails-heroku-tutorial.html
 # Add ruby '1.9.3' to Gemfile
+heroku logs --tail
 git push heroku master
 heroku run rake db:migrate
 heroku restart

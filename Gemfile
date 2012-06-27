@@ -9,6 +9,8 @@ gem 'active_record_deprecated_finders', github: 'rails/active_record_deprecated_
 
 gem 'pg'
 
+gem 'thin'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
