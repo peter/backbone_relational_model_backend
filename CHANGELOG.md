@@ -38,6 +38,7 @@ git add .; git commit -m "Added Procfile"; git push
 heroku apps:create backbone-relational
 gem install bundler --pre # http://railsapps.github.com/rails-heroku-tutorial.html
 # Add ruby '1.9.3' to Gemfile
+# https://devcenter.heroku.com/articles/rails3x-asset-pipeline-cedar
 heroku logs --tail
 git push heroku master
 heroku run rake db:migrate
