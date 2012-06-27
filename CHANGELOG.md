@@ -35,4 +35,8 @@ git push -u origin master
 heroku apps:create backbone-relational
 gem install bundler --pre # http://railsapps.github.com/rails-heroku-tutorial.html
 # Add ruby '1.9.3' to Gemfile
+git push heroku master
+heroku run rake db:migrate
+heroku restart
+heroku apps:open
 ```
