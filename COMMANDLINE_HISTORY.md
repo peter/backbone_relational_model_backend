@@ -44,4 +44,10 @@ git push heroku master
 heroku run rake db:migrate
 heroku restart
 heroku apps:open
+
+# Add categorization
+bin/rails generate scaffold Category name:string
+bin/rails generate scaffold Categorization categorizable:references category:references
+bin/rake db:migrate
+
 ```

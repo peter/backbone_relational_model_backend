@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Categorizable:</strong>
+  <%= @categorization.categorizable %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @categorization.category %>
+</p>
+
+
+<%= link_to 'Edit', edit_categorization_path(@categorization) %> |
+<%= link_to 'Back', categorizations_path %>
